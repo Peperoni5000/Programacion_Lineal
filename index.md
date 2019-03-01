@@ -4,6 +4,8 @@
 
 ## Pagina de programacion lineal
 
+![Imagen de Programacion Lineal](imagen1.jpg)
+
 En esta pagina voy a mostras las cosas amobrosas que estoy aprendiendo en el magnifico curso de programacion lineal
 
 ### Sympy
