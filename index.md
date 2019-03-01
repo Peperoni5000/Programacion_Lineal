@@ -5,7 +5,7 @@ En esta pagina voy a mostras las cosas amobrosas que estoy aprendiendo en el mag
 ### Sympy
 Aprendimos a utilizar la biblioteca sympy
 
-###Enlaces
+### Enlaces
 
 - [Pagina de Python](https://www.python.org/)
 - [Google](https://www.google.com/)
