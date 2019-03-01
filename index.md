@@ -11,7 +11,7 @@ Aprendimos a utilizar la biblioteca sympy
 
 ## La chicharronera
 
-\(x=\fracc{-b+sqrt{b^2-4ac}}{2a}\)
+\(x=\frac{-b+sqrt{b^2-4ac}}{2a}\)
 
 ### Enlaces
 
