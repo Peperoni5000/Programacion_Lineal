@@ -1,0 +1,54 @@
+#+title: Programación Lineal
+#+author: Pérez Hernández José Ángel
+
+#+options: H:2
+
+* Teoria
+** Motivación
+
+El objetiva de la programacion linear es maximisar funciones lineales
+sobre dominios convexos, es decir, definidos sobre regiones dadas por
+desigualdades.
+
+[[file:m%C3%A9todo-simplex.jpg]]
+
+** Ejemplos 
+
+- El problema de la dieta
+- Optimización de lugares en una excursión
+- El problema del flujo máximo
+
+
+** Convexidad
+
+Un conjunto \(X\) es *convexo* si para todos \(x,y\in X\) y \(t\in
+[0,1]\) se tiene que \(tx+(1-t)y\in X\).
+
+** El metodo simplex
+
+* Herramientas computacionales
+** Emacs
+
+| C-x C-s         | Salvar archivo              |
+| C-x C-f         | Abrir archivo               |
+| C-g             | Salir de todo               |
+| M-q             | Formatear el párrafo        |
+| C-x d           | Editar directorios          |
+| C-x 1           | Regresa a una sola pantalla |
+| C-x 2           | Divide horizontalmente      |
+| C-x 3           | Divide verticalmente        |
+| M-w             | Copiar la región            |
+| C-w             | Borrar la región            |
+| Shift y flechas | Seleccionar la región       |
+| C-y             | Pegar la región             |
+| C-x b           | Seleccionar buffer          |
+| C-x k           | Borrar buffer               |
+
+** Git
+*** Git en la teminal
+*** GitHub
+** Python
+*** El lenguaje Python
+*** Jupyter
+** LaTeX
+
