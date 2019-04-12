@@ -2,6 +2,11 @@
 #+author: Pérez Hernández José Ángel
 
 #+options: H:2
+#+latex_header: \usepackage{listings}
+#+latex_header: \lstdefinestyle{source}{basicstyle=\footnotesize\ttfamily,frame=tb}
+#+latex_header: \lstset{style=source}
+#+latex_header: \usepackage[margin=2.5cm]{geometry}
+
 
 * Teoria
 ** Motivación
@@ -44,11 +49,43 @@ Un conjunto \(X\) es *convexo* si para todos \(x,y\in X\) y \(t\in
 | C-x b           | Seleccionar buffer          |
 | C-x k           | Borrar buffer               |
 
+*** Org mode
+
+|C-c C-c |Corre un bloque de codigo |
+
 ** Git
 *** Git en la teminal
 *** GitHub
 ** Python
 *** El lenguaje Python
+
+En el lenguaje Python podemos hacer operaciones:
+
+#+begin_src python :session
+2+2
+#+end_src
+
+#+RESULTS:
+: 4
+
+También podemos usar la biblioteca pulp. Por ejemplo, encontramos el máximo de \(-4+y\) sujeto a \(x+y\)
+
+#+begin_src python :session
+
+from pulp import *
+x = LpVariable("x",0,3)
+y = LpVariable("y",0,1)
+prob = LpProblem("Problema1",LpMinimize)
+prob += x + y <= 2
+prob += -4*x + y
+status = prob.solve()
+value(x),value(y),value(prob.objective)
+
+#+end_src
+
+#+RESULTS:
+| 2.0 | 0.0 | -8.0 |
+
 *** Jupyter
 ** LaTeX
 
