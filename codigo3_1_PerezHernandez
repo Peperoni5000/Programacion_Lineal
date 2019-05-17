@@ -1,0 +1,76 @@
+
+						Zombis
+
+
+library(deSolve)
+
+L=0
+a=0.05
+b=0.002
+d=0.001
+n=0.3
+
+
+yini=c(s=500,z=1,r=0)
+zombies=function(t,y,parms){
+with(as.list(y),{
+ds= L - b*s*z - d*s
+dz= b*s*z + n*r - a*s*z
+dr= d*s + a*s*z - n*r
+list(c(ds,dz,dr))})}
+t=seq(0,250,0.1)
+s=ode(y=yini, times=t, func=zombies, parms=NULL)
+
+
+
+plot(t, s[, 's'], type='l', col='deeppink2')
+lines(t, s[, 'z'], type='l', col='lightblue')
+lines(t, s[, 'r'], type='l', col='chocolate4')
+
+
+
+
+
+
+					Hodgkin y Huxley
+
+
+
+library(deSolve)
+
+
+
+
+
+
+
+
+
+yini=c(s=500,z=1,r=0)
+zombies=function(t,y,parms){
+with(as.list(y),{
+ds= L - b*s*z - d*s
+dz= b*s*z + n*r - a*s*z
+dr= d*s + a*s*z - n*r
+list(c(ds,dz,dr))})}
+t=seq(0,250,0.1)
+s=ode(y=yini, times=t, func=zombies, parms=NULL)
+
+
+
+plot(t, s[, 's'], type='l', col='deeppink2')
+lines(t, s[, 'z'], type='l', col='lightblue')
+lines(t, s[, 'r'], type='l', col='chocolate4')
+
+
+
+
+
+
+
+
+
+
+
+
+
