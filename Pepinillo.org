@@ -8,6 +8,7 @@
 #+latex_header: \usepackage[margin=2.5cm]{geometry}
 
 
+
 * Teoria
 ** Motivación
 
