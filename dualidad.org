@@ -40,3 +40,6 @@ Consideremos el siguiente problema:
 
 
 * Teoremas
+
+Demostraremos que el minimo del problema dual es igual al maximo del
+problema primitivo.
