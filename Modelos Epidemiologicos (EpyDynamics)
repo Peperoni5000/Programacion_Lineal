@@ -1,0 +1,54 @@
+
+
+
+
+
+
+
+library(EpiDynamics)
+parametros = c(beta = 0.0014247, gamma = 0.14286)
+# Condiciones iniciales
+condiciones = c(S = 1000, I = 1)
+# Solución y gráficas
+sis = SIS(pars = parametros, init = condiciones, time = 0:50)
+PlotMods(sis)
+
+#########################################################################
+
+parametros = c(beta = 0.0014247, gamma = 0.14286)
+# Condiciones iniciales
+condiniciales = c(S = 1000, I = 1, R = 0)
+# Solución y gráficas
+sir = SIR(pars = parametros, init = condiniciales, time = 0:50)
+PlotMods(sir)
+
+##########################################################################
+
+parametros = c(mu = 1 / (70 * 365), beta1 = 260 / 365, beta2 = 520 / 365, gamma1 = 1 / 7, 
+                gamma2 = 1 / 7, alpha1 = 0.5, alpha2 = 0.4, a1 = 0.4, a2 = 0.5)
+
+condiciones = c(NSS = 0.1, NIS = 1e-4, NRS = 0.02, NRI = 0,
+              NSI = 1e-4, NSR = 0.5, NIR = 0, NRR = 0.3798)
+
+sirpi = SIRPartialImmunity(pars = parametros, init = condiciones, time = 0:(100 * 365))
+PlotMods(sirpi, variables = c('NIS', 'NIR'), grid = FALSE)
+                                      
+##########################################################################
+
+parametros = c(mu = 1 / (1 * 365), beta = 5 / 365, sigma =
+1 / 14, gamma = 1 / 7)
+# Condiciones iniciales
+condiniciales = c(S = 1000, E = 100, I = 1, R = 0)
+seir=SEIR(pars=parametros, init=condiniciales, time=0:50)
+PlotMods(seir)
+
+##########################################################################
+
+parametros= c(muH = 5.5e-5, muM = 0.143, vH = 5.5e-2, vM = 1.443e3, 
+                betaHM = 0.5, betaMH = 0.8, gamma = 0.033, r = 0.5 / 1e3)
+
+condiciones = c(XH = 1e3, XM = 1e4, YH = 1, YM = 1)
+
+
+sirv = SIRVector(pars = parametros, init = condiciones, time = 0:1000)                                 
+PlotMods(sirv)
