@@ -1,0 +1,118 @@
+				#Ruina del jugador
+
+
+
+par(mfrow=c(2,3))
+for(k in 1:6){
+x=rep(0,1000)
+t=seq(0,999)
+p=0.55
+x[1]=50
+i=1
+
+for(j in 1:1000){
+	while((x[i]>0) && (x[i]<100)){
+		y=runif(1)
+		if(y<=p){
+			x[i+1]=x[i]+1
+		}
+		if(y>p){
+			x[i+1]=x[i]-1
+		}
+	i=i+1
+	}
+}
+plot(t[1:i],x[1:i],type='s',col='deeppink2')
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			# Nacimiento-Muerte
+
+
+
+
+
+
+x=rep(0,1000)
+t=seq(0,999)
+N=26
+n=0.5					#Cambié los valores de n y m para las demas graficas
+m=0.4
+x[1]=3
+i=1
+for(j in 1:1000){
+	
+	y=runif(1)
+	if(x[i]==0){
+		if(y<=n){
+			x[i+1]=x[i]+1
+		}
+		if(y>n){
+			x[i+1]=x[i]
+		}
+	}
+	if(x[i]==N){
+		if(y<=m){
+			x[i+1]=x[i]-1
+		}
+		if(y>m){
+			x[i+1]=x[i]
+		}
+	}
+	if((x[i] != 0) && (x[i] != 26)){
+		if(y<=n){
+			x[i+1]=x[i]+1
+		}
+		if((y>n) && (y<=n+m)){
+			x[i+1]=x[i]-1
+		}
+		if(y>m+n){
+			x[i+1]=x[i]
+		}
+	}
+	i=i+1
+}
+plot(t[1:i],x[1:i],type='s',col='deeppink2')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
